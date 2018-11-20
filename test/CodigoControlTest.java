@@ -35,6 +35,16 @@ public class CodigoControlTest {
     @After
     public void tearDown() {
     }
-    
+    @Test
+    public void testGenerarQr(){
+        CodigoControl cod=new CodigoControl();
+        boolean respuesta=cod.generarQr("Juan",12345678,0);
+        assertEquals(false, respuesta);
+        respuesta=cod.generarQr("Juan",12345678,10);
+        assertEquals(true,respuesta);
+        respuesta=cod.generarQr("Juan",1234567890,0);
+        assertEquals(false,respuesta);
+   
+    }
     
 }

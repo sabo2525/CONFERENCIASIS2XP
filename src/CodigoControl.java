@@ -9,5 +9,11 @@
  * @author sabo
  */
 public class CodigoControl {
+  
+    public boolean generarQr(String nombre ,int ci,int grupoConferencia){
+    
+    return true;
+    
+    }
     
 }
