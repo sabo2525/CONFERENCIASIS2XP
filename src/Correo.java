@@ -9,8 +9,14 @@
  * @author sabo
  */
 public class Correo {
-    public boolean prueba(){
+    public boolean tieneConexionInternet(){
         
-        return false;
+        return true;
+    }
+    public boolean enviar(String correoDestino){
+        return true;
+    }
+    public boolean validarCorreo(){
+        return true;
     }
 }

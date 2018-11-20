@@ -40,5 +40,13 @@ public class CorreoTest {
     public void testConexionInternet(){
         
     }
+    @Test 
+    public void testValidarCorreo(){
+        
     
+    }
+    @Test 
+    public void testEnviar(){
+        
+    }
 }
