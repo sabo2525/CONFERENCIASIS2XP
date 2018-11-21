@@ -56,7 +56,7 @@ public class ConexionTest {
         Connection expResult = null;
         Connection result = instance.getConexion();
         assertEquals(expResult, result);
-        
+       //arreglar este test 
     }
     
 }
