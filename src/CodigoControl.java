@@ -40,9 +40,7 @@ public class CodigoControl {
         Writer writer = new QRCodeWriter();
         try {
             matriz = writer.encode(codigo, BarcodeFormat.QR_CODE, qrTamAncho, qrTamAlto);
-        } catch (WriterException ex) {
-            respuesta = false;
-        } 
+        
         BufferedImage imagen = new BufferedImage(qrTamAncho,
                 qrTamAlto, BufferedImage.TYPE_INT_RGB);
         for (int y = 0; y < qrTamAlto; y++) {
@@ -52,18 +50,16 @@ public class CodigoControl {
             }
         }
         FileOutputStream qrCode = null;
-        try {
-            qrCode = new FileOutputStream(miDir+"/qr.png");
-        } catch (FileNotFoundException ex) {
-            respuesta = false;
-        }
-        try {
+      
+            qrCode = new FileOutputStream(miDir+"/ImagenQR/qr.png");
             ImageIO.write(imagen, formato, qrCode);
             respuesta=true;
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             respuesta = false;
         }
         return respuesta;
     }     
-    
+     public static void main(String args[]) throws Exception {
+    new CodigoControl().generarQr("Josiie",123,10);
+     }
     }
