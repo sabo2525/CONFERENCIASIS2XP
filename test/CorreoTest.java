@@ -35,18 +35,34 @@ public class CorreoTest {
     @After
     public void tearDown() {
     }
-
-    @Test
-    public void testConexionInternet(){
-        
-    }
-    @Test 
+     @Test 
     public void testValidarCorreo(){
+        Correo c= new Correo();
+        assertTrue(c.validarCorreo("algo@gmail.com"));
+        assertFalse(c.validarCorreo(""));
+        assertFalse(c.validarCorreo("algo@"));
+        assertFalse(c.validarCorreo("algo@gmail"));
+        assertFalse(c.validarCorreo("algo@gmail.dcdads"));
+        assertFalse(c.validarCorreo("@gmail.dcdads"));
+        assertFalse(c.validarCorreo("gmail.dcdads"));
+        assertFalse(c.validarCorreo("gmail.dcdads"));
+        assertFalse(c.validarCorreo("asdfasd"));
+        assertFalse(c.validarCorreo("2435243"));
+        assertFalse(c.validarCorreo("......."));
+        assertFalse(c.validarCorreo("//*/++"));
+        assertTrue(c.validarCorreo("sdcsa-23@hotmail.com"));
+        assertTrue(c.validarCorreo("sdcsa-23@sdasd.asdfsad"));
         
     
     }
     @Test 
     public void testEnviar(){
-        
+        Correo c= new Correo();
+        if(c.tieneConexionInternet()){
+            assertTrue(c.enviar("cbrt113@gmail.com"));
+        }else{
+            assertFalse(c.enviar("cbrt113@gmail.com"));
+        }
     }
+
 }

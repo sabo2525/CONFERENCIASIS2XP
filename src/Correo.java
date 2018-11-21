@@ -16,7 +16,7 @@ public class Correo {
     public boolean enviar(String correoDestino){
         return true;
     }
-    public boolean validarCorreo(){
+    public boolean validarCorreo(String correo){
         return true;
     }
 }
