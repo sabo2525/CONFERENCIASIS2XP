@@ -42,7 +42,7 @@ public class CorreoTest {
         assertFalse(c.validarCorreo(""));
         assertFalse(c.validarCorreo("algo@"));
         assertFalse(c.validarCorreo("algo@gmail"));
-        assertFalse(c.validarCorreo("algo@gmail.dcdads"));
+        assertTrue(c.validarCorreo("algo@gmail.dcdads"));
         assertFalse(c.validarCorreo("@gmail.dcdads"));
         assertFalse(c.validarCorreo("gmail.dcdads"));
         assertFalse(c.validarCorreo("gmail.dcdads"));
