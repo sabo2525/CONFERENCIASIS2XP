@@ -24,11 +24,34 @@ public class TestHorario {
     @Test
     public void formatoHoraSimbolos(){
         Horario h = new Horario();
-        String simbolos = "/*-=.";
-        Assert.assertEquals(true,h.esHoraValida(simbolos));
+        String simbolos = "?*-=.";
+        Assert.assertEquals(false,h.esHoraValida(simbolos));
         
     }
-    
+    @Test
+    public void formatoHoraLongitudMayor(){
+        Horario h = new Horario();
+        String simbolos = "?*-=kquio";
+        Assert.assertEquals(false,h.esHoraValida(simbolos));        
+    }
+    @Test
+    public void formatoHoraLongitudMenor(){
+        Horario h = new Horario();
+        String simbolos = "?*-";
+        Assert.assertEquals(false,h.esHoraValida(simbolos));        
+    }
+    @Test
+    public void HoraNoMayora24(){
+        Horario h = new Horario();
+        String simbolos = "25:05";
+        Assert.assertEquals(false,h.esHoraValida(simbolos));        
+    }
+    @Test
+    public void MinNoMayora59(){
+        Horario h = new Horario();
+        String simbolos = "25:60";
+        Assert.assertEquals(false,h.esHoraValida(simbolos));        
+    }
     @BeforeClass
     public static void setUpClass() {
     }
