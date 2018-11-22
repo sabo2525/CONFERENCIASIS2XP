@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
+import historia3oscarmiguel.Horario;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -18,6 +20,13 @@ import static org.junit.Assert.*;
 public class TestHorario {
     
     public TestHorario() {
+    }
+    @Test
+    public void formatoHoraSimbolos(){
+        Horario h = new Horario();
+        String simbolos = "/*-=.";
+        Assert.assertEquals(true,h.esHoraValida(simbolos));
+        
     }
     
     @BeforeClass

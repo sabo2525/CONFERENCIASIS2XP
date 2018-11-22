@@ -9,11 +9,9 @@ package historia3oscarmiguel;
  *
  * @author oscar
  */
-public class Horario {    
-    public Horario(){}
-    
-    public boolean esHoraValida(String hora){
-        
-        return true;
-    }
+public class Reloj {
+   static private char horas[][];
+   static private char minutos[][];
+   
+   
 }
