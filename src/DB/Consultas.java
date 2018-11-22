@@ -54,7 +54,8 @@ public class Consultas {
     }
     
      // Inserta una tupla a la tabla de asistentes
-    public boolean insertarAsistente(String ci_asistente, String nombre_asis, String apellido_asis, String ocupacion_asis, String correo_asis){
+    public boolean insertarAsistente(String ci_asistente, String nombre_asis, String apellido_asis,
+            String ocupacion_asis, String correo_asis){
         boolean res=false;
         String values = "('"+ci_asistente +"','"+nombre_asis+"','"+apellido_asis+"','"+ocupacion_asis+"','"+correo_asis+"')";
         String query = "INSERT INTO asistentes (ci_asis,nombre_asis,apellido_asis,ocupacion_asis,correo_asis) VALUES" + values;
