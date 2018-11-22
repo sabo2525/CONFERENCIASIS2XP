@@ -29,13 +29,11 @@ public class Inscripcion extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextFieldNombre = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextFieldCorreo = new javax.swing.JTextField();
         jTextFieldOcupacion = new javax.swing.JTextField();
         jTextFieldActividad = new javax.swing.JTextField();
         jLabelNombre = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabelCorreo = new javax.swing.JLabel();
         jLabelOcupacion = new javax.swing.JLabel();
@@ -49,48 +47,42 @@ public class Inscripcion extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 340, 30));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 340, 30));
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 340, 30));
-        getContentPane().add(jTextFieldCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, 340, 30));
-        getContentPane().add(jTextFieldOcupacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 340, 30));
-        getContentPane().add(jTextFieldActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 340, 30));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 340, 30));
+        getContentPane().add(jTextFieldCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 340, 30));
+        getContentPane().add(jTextFieldOcupacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 340, 30));
+        getContentPane().add(jTextFieldActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 340, 30));
 
         jLabelNombre.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelNombre.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelNombre.setText("NOMBRE:");
-        getContentPane().add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 70, -1));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("APELLIDO:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+        jLabelNombre.setText("NOMBRE COMPLETO:");
+        getContentPane().add(jLabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 160, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("CARNET:");
+        jLabel2.setText("CARNET DE IDENTIDAD:");
         jLabel2.setToolTipText("");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         jLabelCorreo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelCorreo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCorreo.setText("CORREO:");
-        getContentPane().add(jLabelCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+        getContentPane().add(jLabelCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, -1, -1));
 
         jLabelOcupacion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelOcupacion.setForeground(new java.awt.Color(255, 255, 255));
         jLabelOcupacion.setText("OCUPACIÓN:");
-        getContentPane().add(jLabelOcupacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
+        getContentPane().add(jLabelOcupacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
 
         jLabelActividad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelActividad.setForeground(new java.awt.Color(255, 255, 255));
         jLabelActividad.setText("CONFERENCIA:");
-        getContentPane().add(jLabelActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, -1, -1));
+        getContentPane().add(jLabelActividad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
 
         jLabelRegistro.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelRegistro.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,6 +130,7 @@ public class Inscripcion extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButtonAtrasActionPerformed
 
+    //Al presionar el boton se debe guardar los datos en la base de datos y además mandar el QR al correo de la persona.
     private void jButtonIngresarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarDatosActionPerformed
 
     }//GEN-LAST:event_jButtonIngresarDatosActionPerformed
@@ -181,7 +174,6 @@ public class Inscripcion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAtras;
     private javax.swing.JButton jButtonIngresarDatos;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelActividad;
     private javax.swing.JLabel jLabelCorreo;
@@ -189,7 +181,6 @@ public class Inscripcion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNombre;
     private javax.swing.JLabel jLabelOcupacion;
     private javax.swing.JLabel jLabelRegistro;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextFieldActividad;
     private javax.swing.JTextField jTextFieldCorreo;
