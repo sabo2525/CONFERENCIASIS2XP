@@ -25,8 +25,7 @@ public class TestHorario {
     public void formatoHoraSimbolos(){
         Horario h = new Horario();
         String simbolos = "?*-=.";
-        Assert.assertEquals(false,h.esHoraValida(simbolos));
-        
+        Assert.assertEquals(false,h.esHoraValida(simbolos));        
     }
     @Test
     public void formatoHoraLongitudMayor(){
@@ -49,7 +48,14 @@ public class TestHorario {
     @Test
     public void MinNoMayora59(){
         Horario h = new Horario();
-        String simbolos = "25:60";
+        String simbolos = "23:60";
+        Assert.assertEquals(false,h.esHoraValida(simbolos));        
+    }
+    
+    @Test
+    public void DosPuntos(){
+        Horario h = new Horario();
+        String simbolos = "23;09";
         Assert.assertEquals(false,h.esHoraValida(simbolos));        
     }
     @BeforeClass

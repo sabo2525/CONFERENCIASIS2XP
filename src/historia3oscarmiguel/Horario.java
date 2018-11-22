@@ -19,9 +19,15 @@ public class Horario {
             int h2=hora.charAt(1);
             int m1=hora.charAt(3);
             int m2 =hora.charAt(4);
-            if((h1<58&&h1>47)&&(h2<58&&h2>47)&&(m1<58&&m1>47)&&(m2<58&&m2>47)){
+            if((h1<58&&h1>47)&&(h2<58&&h2>47)&&(m1<58&&m1>47)&&(m2<58&&m2>47)&&(hora.charAt(2)==':')){
                 res=true;
-                
+                String h = ""+hora.charAt(0)+hora.charAt(1);
+                String m = ""+hora.charAt(3)+hora.charAt(4);
+                int hh=Integer.parseInt(h);
+                int mm = Integer.parseInt(m);
+                if(!(hh<24&&hh>-1&&mm<60&&mm>-1)){
+                    res = false;
+                }
             }
             else{
                 res =false;
