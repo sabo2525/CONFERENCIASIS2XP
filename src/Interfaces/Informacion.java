@@ -54,16 +54,16 @@ public class Informacion extends javax.swing.JFrame {
         jLabelTexto1.setForeground(new java.awt.Color(102, 153, 255));
         jLabelTexto1.setText("Obtener un listado de todos los inscritos");
         jLabelTexto1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabelTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        getContentPane().add(jLabelTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
 
         jLabelTexto2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTexto2.setForeground(new java.awt.Color(102, 153, 255));
-        jLabelTexto2.setText("Verificar si una determinada persona esta inscrita");
+        jLabelTexto2.setText("Verificar inscripcion de una persona");
         jLabelTexto2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jLabelTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, -1, 30));
+        getContentPane().add(jLabelTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 220, 30));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Agenda.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/2Asistencia1.png"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -73,15 +73,17 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel1MouseExited(evt);
             }
         });
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 310, 190));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 270, 310));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Idea.png"))); // NOI18N
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/2Horario1.png"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -90,14 +92,17 @@ public class Informacion extends javax.swing.JFrame {
             }
         });
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLabel2MouseExited(evt);
             }
         });
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 300, 190));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 270, 310));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/FondoAzul2.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,6 +133,16 @@ public class Informacion extends javax.swing.JFrame {
     private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
     }//GEN-LAST:event_jLabel2MouseExited
+
+    //Se ejecuta cuando el usuario hace click sobre el JLabel. Ejecutar el query para verificar la inscripcion de una determinada persona.
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    //Se ejecuta cuando el usuario hace click sobre el JLabel. Ejecutar el query para mostrar la lista de todos los inscritos.
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments

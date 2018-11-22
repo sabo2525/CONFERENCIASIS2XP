@@ -31,8 +31,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButtonAtras = new javax.swing.JButton();
         jLabelImagen1 = new javax.swing.JLabel();
         jLabelImagen2 = new javax.swing.JLabel();
+        jLabelImagen3 = new javax.swing.JLabel();
+        jLabelImagen4 = new javax.swing.JLabel();
         jLabelTexto1 = new javax.swing.JLabel();
         jLabelTexto2 = new javax.swing.JLabel();
+        jLabelTexto4 = new javax.swing.JLabel();
+        jLabelTexto3 = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,20 +52,92 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jButtonAtrasActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, -1));
+        getContentPane().add(jButtonAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, -1, -1));
 
         jLabelImagen1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelImagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Inscripcion2.png"))); // NOI18N
-        getContentPane().add(jLabelImagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 210, 210));
+        jLabelImagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Handshake.png"))); // NOI18N
+        jLabelImagen1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabelImagen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
+        jLabelImagen1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelImagen1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabelImagen1MouseMoved(evt);
+            }
+        });
+        jLabelImagen1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelImagen1MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelImagen1MouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabelImagen1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 240, 170));
 
         jLabelImagen2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelImagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/INF.png"))); // NOI18N
-        getContentPane().add(jLabelImagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 240, 240));
+        jLabelImagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Idea.png"))); // NOI18N
+        jLabelImagen2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabelImagen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
+        jLabelImagen2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelImagen2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabelImagen2MouseMoved(evt);
+            }
+        });
+        jLabelImagen2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelImagen2MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelImagen2MouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabelImagen2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 240, 170));
+
+        jLabelImagen3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelImagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Reloj.png"))); // NOI18N
+        jLabelImagen3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabelImagen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
+        jLabelImagen3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelImagen3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabelImagen3MouseMoved(evt);
+            }
+        });
+        jLabelImagen3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelImagen3MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelImagen3MouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabelImagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 240, 170));
+
+        jLabelImagen4.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelImagen4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelImagen4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/Agenda_1.png"))); // NOI18N
+        jLabelImagen4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabelImagen4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
+        jLabelImagen4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabelImagen4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabelImagen4MouseMoved(evt);
+            }
+        });
+        jLabelImagen4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelImagen4MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelImagen4MouseExited(evt);
+            }
+        });
+        getContentPane().add(jLabelImagen4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 240, 170));
 
         jLabelTexto1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelTexto1.setForeground(new java.awt.Color(102, 153, 255));
         jLabelTexto1.setText("INSCRIPCION");
-        jLabelTexto1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
         jLabelTexto1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelTexto1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -76,12 +152,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jLabelTexto1MouseExited(evt);
             }
         });
-        getContentPane().add(jLabelTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, -1, -1));
+        getContentPane().add(jLabelTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, -1, -1));
 
         jLabelTexto2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelTexto2.setForeground(new java.awt.Color(102, 153, 255));
         jLabelTexto2.setText("INFORMACION");
-        jLabelTexto2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
         jLabelTexto2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelTexto2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -96,11 +171,23 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jLabelTexto2MouseExited(evt);
             }
         });
-        getContentPane().add(jLabelTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, -1, -1));
+        getContentPane().add(jLabelTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, -1, -1));
 
+        jLabelTexto4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelTexto4.setForeground(new java.awt.Color(102, 153, 255));
+        jLabelTexto4.setText("ASISTENCIA");
+        getContentPane().add(jLabelTexto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, -1, -1));
+
+        jLabelTexto3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelTexto3.setForeground(new java.awt.Color(102, 153, 255));
+        jLabelTexto3.setText("HORARIOS");
+        getContentPane().add(jLabelTexto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, -1, -1));
+
+        jLabelFondo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelFondo.setForeground(new java.awt.Color(102, 153, 255));
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/FondoAzul2.jpg"))); // NOI18N
         jLabelFondo.setPreferredSize(new java.awt.Dimension(15, 80));
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 500));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -110,39 +197,91 @@ public class MenuPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButtonAtrasActionPerformed
 
-    //Coloca un borde blanco rodeando al JLabel cuando detecta movimiento del mouse por encima de el
     private void jLabelTexto1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto1MouseMoved
-        jLabelTexto1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153,153,153)));
+
     }//GEN-LAST:event_jLabelTexto1MouseMoved
     
-    //Coloca un borde azul rodeando al JLabel cuando el mouse deja de estar encima de el
     private void jLabelTexto1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto1MouseExited
-        jLabelTexto1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
+
     }//GEN-LAST:event_jLabelTexto1MouseExited
 
-    //Coloca un borde blanco rodeando al JLabel cuando detecta movimiento del mouse por encima de el
     private void jLabelTexto2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto2MouseMoved
-        jLabelTexto2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153,153,153)));
+
     }//GEN-LAST:event_jLabelTexto2MouseMoved
 
-    //Coloca un borde azul rodeando al JLabel cuando el mouse deja de estar encima de el
     private void jLabelTexto2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto2MouseExited
-        jLabelTexto2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
+        
     }//GEN-LAST:event_jLabelTexto2MouseExited
 
-    //Cierra esta ventana para ir a la ventana de inscripcion
     private void jLabelTexto1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto1MouseClicked
+
+    }//GEN-LAST:event_jLabelTexto1MouseClicked
+
+    private void jLabelTexto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto2MouseClicked
+
+    }//GEN-LAST:event_jLabelTexto2MouseClicked
+
+    //Coloca un borde blanco rodeando al JLabel cuando detecta movimiento del mouse por encima de el
+    private void jLabelImagen1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen1MouseMoved
+        jLabelImagen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153,153,153)));
+    }//GEN-LAST:event_jLabelImagen1MouseMoved
+
+    //Coloca un borde blanco rodeando al JLabel cuando detecta movimiento del mouse por encima de el
+    private void jLabelImagen2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen2MouseMoved
+        jLabelImagen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153,153,153)));
+    }//GEN-LAST:event_jLabelImagen2MouseMoved
+
+    //Coloca un borde blanco rodeando al JLabel cuando detecta movimiento del mouse por encima de el
+    private void jLabelImagen3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen3MouseMoved
+        jLabelImagen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153,153,153)));
+    }//GEN-LAST:event_jLabelImagen3MouseMoved
+
+    //Coloca un borde blanco rodeando al JLabel cuando detecta movimiento del mouse por encima de el
+    private void jLabelImagen4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen4MouseMoved
+        jLabelImagen4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153,153,153)));
+    }//GEN-LAST:event_jLabelImagen4MouseMoved
+
+    //Coloca un borde azul rodeando al JLabel cuando el mouse deja de estar encima de el
+    private void jLabelImagen1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen1MouseExited
+        jLabelImagen1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
+    }//GEN-LAST:event_jLabelImagen1MouseExited
+
+    //Coloca un borde azul rodeando al JLabel cuando el mouse deja de estar encima de el
+    private void jLabelImagen2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen2MouseExited
+        jLabelImagen2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
+    }//GEN-LAST:event_jLabelImagen2MouseExited
+
+    //Coloca un borde azul rodeando al JLabel cuando el mouse deja de estar encima de el
+    private void jLabelImagen3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen3MouseExited
+        jLabelImagen3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
+    }//GEN-LAST:event_jLabelImagen3MouseExited
+
+    //Coloca un borde azul rodeando al JLabel cuando el mouse deja de estar encima de el
+    private void jLabelImagen4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen4MouseExited
+        jLabelImagen4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0,51,102)));
+    }//GEN-LAST:event_jLabelImagen4MouseExited
+
+    //Este metodo se ejecuta cuando el usuario hace click sobre el jLabel. Se debe ejecutar el codigo de verificacion del QR
+    private void jLabelImagen4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelImagen4MouseClicked
+
+    //Este metodo se ejecuta cuando el usuario hace click sobre el jLabel. Se debe ejecutar el codigo para hacer horarios.
+    private void jLabelImagen3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelImagen3MouseClicked
+
+    private void jLabelImagen1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen1MouseClicked
         Inscripcion interfaz= new Inscripcion();
         interfaz.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabelTexto1MouseClicked
+    }//GEN-LAST:event_jLabelImagen1MouseClicked
 
-    //Cierra esta ventana para ir a la ventana de informacion
-    private void jLabelTexto2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTexto2MouseClicked
+    private void jLabelImagen2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen2MouseClicked
         Informacion interfaz= new Informacion();
         interfaz.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jLabelTexto2MouseClicked
+    }//GEN-LAST:event_jLabelImagen2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -187,7 +326,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFondo;
     private javax.swing.JLabel jLabelImagen1;
     private javax.swing.JLabel jLabelImagen2;
+    private javax.swing.JLabel jLabelImagen3;
+    private javax.swing.JLabel jLabelImagen4;
     private javax.swing.JLabel jLabelTexto1;
     private javax.swing.JLabel jLabelTexto2;
+    private javax.swing.JLabel jLabelTexto3;
+    private javax.swing.JLabel jLabelTexto4;
     // End of variables declaration//GEN-END:variables
 }
