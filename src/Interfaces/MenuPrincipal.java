@@ -263,7 +263,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     //Este metodo se ejecuta cuando el usuario hace click sobre el jLabel. Se debe ejecutar el codigo de verificacion del QR
     private void jLabelImagen4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelImagen4MouseClicked
-        // TODO add your handling code here:
+        EscanerQr interfaz= new EscanerQr();
+        interfaz.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabelImagen4MouseClicked
 
     //Este metodo se ejecuta cuando el usuario hace click sobre el jLabel. Se debe ejecutar el codigo para hacer horarios.
