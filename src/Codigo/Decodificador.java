@@ -27,11 +27,12 @@ public class Decodificador {
     public  String decodificarQr(BufferedImage bufferedImage) throws IOException {//busca una imagen en el directorio y decodifica en un string
         LuminanceSource source = new BufferedImageLuminanceSource(bufferedImage);
         BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+        
         try {
             Result result = new MultiFormatReader().decode(bitmap);
             return result.getText();
         } catch (NotFoundException e) {
-            return "noQr";
+            return "noQr"; 
         }
     }
 }

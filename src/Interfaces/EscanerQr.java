@@ -154,6 +154,7 @@ public class EscanerQr extends javax.swing.JFrame {
                 Decodificador leer=new Decodificador();
                 while (bandera) {
                     BufferedImage image = webcam.getImage();
+                    
                     try {
                     System.out.println(leer.decodificarQr(image));    
                     if(!(leer.decodificarQr(image).equals("noQr"))){
