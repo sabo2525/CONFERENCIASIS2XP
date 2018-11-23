@@ -93,6 +93,8 @@ public class Consultas {
         catch(SQLException ex){
             Logger.getLogger(Consultas.class.getName()).log(Level.SEVERE, null, ex);
             res=false;
+                      JOptionPane.showMessageDialog(null,"eror"+ ex);
+
         }
         return res;
     }
