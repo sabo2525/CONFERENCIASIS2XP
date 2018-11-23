@@ -24,8 +24,7 @@ import javax.imageio.ImageIO;
  * @author Revollito
  */
 public class Decodificador {
-    public  String decodificarQr(File qrCodeimage) throws IOException {//busca una imagen en el directorio y decodifica en un string
-        BufferedImage bufferedImage = ImageIO.read(qrCodeimage);
+    public  String decodificarQr(BufferedImage bufferedImage) throws IOException {//busca una imagen en el directorio y decodifica en un string
         LuminanceSource source = new BufferedImageLuminanceSource(bufferedImage);
         BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
         try {

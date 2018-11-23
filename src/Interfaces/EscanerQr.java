@@ -155,15 +155,14 @@ public class EscanerQr extends javax.swing.JFrame {
                 while (bandera) {
                     BufferedImage image = webcam.getImage();
                     try {
-                        // guarda una captura a test.png
-                        File file = new File((new File("."))+"/src/ImagenesInterfaces/decodificar.png");
-                        ImageIO.write(image, "PNG", file);
-                    
-                    if(!(leer.decodificarQr(file).equals("noQr"))){
+                    System.out.println(leer.decodificarQr(image));    
+                    if(!(leer.decodificarQr(image).equals("noQr"))){
                         bandera=false;
-                        System.out.println(leer.decodificarQr(file));
+                        System.out.println(leer.decodificarQr(image));
+                        System.exit(0);
                     }
                     } catch (IOException ex) {
+                     Logger.getLogger(EscanerQr.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }
