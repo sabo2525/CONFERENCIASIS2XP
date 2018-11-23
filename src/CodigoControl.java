@@ -31,7 +31,7 @@ public class CodigoControl {
     private static final int qrTamAncho = 400;
     private static final int qrTamAlto = 400;
     private static final String formato = "png";
-  
+  //genera una imagen qr con el nombre ci y numero de grupo y devuelve true si genero con exito o false si falla  
     public boolean generarQr(String nombre ,int ci,int grupoConferencia){
         boolean respuesta = false;
         File miDir = new File (".");

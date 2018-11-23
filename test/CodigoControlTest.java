@@ -5,6 +5,7 @@
  */
 
 import java.io.File;
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -37,29 +38,23 @@ public class CodigoControlTest {
     public void tearDown() {
     }
     @Test
-    public void testGenerarQr(){
+    public void testGenerarQr() throws IOException{
         CodigoControl cod=new CodigoControl();
+        Decodificador deco=new Decodificador();
         boolean respuesta=cod.generarQr("Juan",12345678,0);
-        assertEquals(false, respuesta);
-        respuesta=cod.generarQr("Juan",12345678,10);
+        String prueba="Juan-12345678-10";
+        cod.generarQr("Juan",12345678,10);
+        File file = new File((new File("."))+"/ImagenQR/qr.png");
+        assertTrue(prueba.equals(deco.decodificarQr(file)));
         assertEquals(true,respuesta);
         respuesta=cod.generarQr("Juan",1234567890,10);
-        assertEquals(false,respuesta);
-        respuesta=cod.generarQr("Juan ",1234567890,10);
-        assertEquals(false,respuesta);
-        respuesta=cod.generarQr("Juan",12340567,10);
-        assertEquals(false,respuesta);
-        respuesta=cod.generarQr("Pedro",87654321,20);
         assertEquals(true,respuesta);
         respuesta=cod.generarQr("Pedro",87654321,20);
         assertEquals(true,respuesta);
-        respuesta=cod.generarQr(" Pedro",87654321,20);
-        assertEquals(false,respuesta);
-        File img = new File("");
-        assertEquals(true,img.exists());
-        File img2 = new File("");
-        assertEquals(false,img2.exists());
-        
+        String prueba2="Pedro-87654321-20";
+        cod.generarQr("Pedro",87654321,20);
+        File file2 = new File((new File("."))+"/ImagenQR/qr.png");
+        assertTrue(prueba2.equals(deco.decodificarQr(file2)));
     }
     
 }
