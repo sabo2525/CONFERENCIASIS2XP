@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+import DB.Conexion;
+import DB.Consultas;
+import java.sql.Connection;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,7 +19,9 @@ import static org.junit.Assert.*;
  * @author pc
  */
 public class ConsultasTest {
-    
+     Conexion con;
+     Consultas co;
+     Connection c;
     public ConsultasTest() {
     }
     
@@ -29,37 +34,62 @@ public class ConsultasTest {
     }
     
     @Before
+    public void before(){
+       
+       con = new Conexion();
+       c=con.getConexion();
+       co= new Consultas(c);
+    
+    }
     public void setUp() {
     }
     
     @After
     public void tearDown() {
     }
+//    public void after(){
+//    co.eliminarInscrito("12345");
+//    System.out.println("eliminarInscrito");
+//    }
 
    
     @Test
     public void testValidarAsistente() {
         System.out.println("validarAsistente");
-        int ciAsistente = 0;
-        Consultas instance = null;
-        boolean result = instance.validarAsistente(ciAsistente);
-        assertTrue( result);
+        String ciAsistente = "123";
+        
+        boolean result = co.validarAsistente(ciAsistente);
+        assertFalse(result);
        
     }
 
     @Test
     public void testInsertarAsistente() {
         System.out.println("insertarAsistente");
-        int ci_asistente = 0;
-        String nombre_asis = "";
-        String apellido_asis = "";
-        String ocupacion_asis = "";
-        String correo_asis = "";
-        int idGrupo = 0;
-        Consultas instance = null;
-        boolean result = instance.insertarAsistente(ci_asistente, nombre_asis, apellido_asis, ocupacion_asis, correo_asis, idGrupo);
+        String ci_asistente = "12345";
+        String nombre_asis = "luis";
+        String ocupacion_asis = "ingeniero";
+        String correo_asis = "correo@gmail.com";
+        boolean result =co.insertarAsistente(ci_asistente, nombre_asis, 
+                  correo_asis,ocupacion_asis);
         assertTrue( result);
        
     }
+     @Test
+    public void testEliminarAsistente() {
+        System.out.println("eliminarAsistente");
+        String ciAsistente = "12345";
+        
+        boolean result = co.eliminarInscrito(ciAsistente);
+        assertTrue(result);
+       
+    }
+     @Test
+    public void testInscribirasis() {
+        System.out.println("InscribirAsistente");
+    
+    co.inscribirGrupo("1-2-3-4", "123");
+    }
+
     
 }
