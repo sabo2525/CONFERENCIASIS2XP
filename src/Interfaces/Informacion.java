@@ -5,6 +5,11 @@
  */
 package Interfaces;
 
+import DB.Conexion;
+import DB.Consultas;
+import java.sql.Connection;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Edgar Ruben B
@@ -42,7 +47,7 @@ public class Informacion extends javax.swing.JFrame {
         jButtonAtras.setBackground(new java.awt.Color(102, 102, 255));
         jButtonAtras.setForeground(new java.awt.Color(255, 255, 255));
         jButtonAtras.setText("Atrás");
-        jButtonAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonAtras.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButtonAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAtrasActionPerformed(evt);
@@ -66,7 +71,7 @@ public class Informacion extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/2Asistencia1.png"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jLabel1MouseMoved(evt);
@@ -85,7 +90,7 @@ public class Informacion extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesInterfaces/2Horario1.png"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 51, 153)));
-        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jLabel2MouseMoved(evt);
@@ -136,12 +141,25 @@ public class Informacion extends javax.swing.JFrame {
 
     //Se ejecuta cuando el usuario hace click sobre el JLabel. Ejecutar el query para verificar la inscripcion de una determinada persona.
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+String carnet = JOptionPane.showInputDialog("Escriba El Carnet de Identidad que desea consultar");
+      Conexion c= new Conexion();
+      Consultas con=new Consultas(c.getConexion());
+
+        if (con.validarAsistente(carnet)) {
+            JOptionPane.showMessageDialog(null, "El Asistente Que Indico Se Encuentra Inscrito");
+        } else {
+         JOptionPane.showMessageDialog(null, "El Asistente Que Indico NO  Se Encuentra Inscrito");
+
+        }
+
         
     }//GEN-LAST:event_jLabel2MouseClicked
 
     //Se ejecuta cuando el usuario hace click sobre el JLabel. Ejecutar el query para mostrar la lista de todos los inscritos.
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        // TODO add your handling code here:
+        Inscritos interfaz = new Inscritos();
+        interfaz.setVisible(true);
+        //this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
@@ -169,6 +187,7 @@ public class Informacion extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Informacion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

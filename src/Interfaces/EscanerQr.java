@@ -44,6 +44,7 @@ public class EscanerQr extends javax.swing.JFrame {
      */
     public EscanerQr() {
         initComponents();
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
 
         webcam = Webcam.getDefault();
         webcam.setViewSize(webcam.getViewSizes()[0]);
@@ -160,6 +161,9 @@ public class EscanerQr extends javax.swing.JFrame {
                     if(!(leer.decodificarQr(image).equals("noQr"))){
                         bandera=false;
                         System.out.println(leer.decodificarQr(image));
+                        
+                        
+                        
                         System.exit(0);
                     }
                     } catch (IOException ex) {

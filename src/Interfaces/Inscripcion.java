@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import Codigo.CodigoControl;
+import Codigo.Correo;
 import DB.Conexion;
 import DB.Consultas;
 import java.sql.Connection;
@@ -19,11 +21,15 @@ public class Inscripcion extends javax.swing.JFrame {
     /**
      * Creates new form Inscripcion2
      */
-    Connection con;
+    Connection c;
+Conexion co;
+Consultas con;
     public Inscripcion() {
         initComponents();
-        Conexion c=new Conexion();
-        con=c.getConexion();
+        co=new Conexion();
+        c=co.getConexion();
+        con=new Consultas(c);
+        
         this.setLocationRelativeTo(null);
     }
 
@@ -140,17 +146,27 @@ public class Inscripcion extends javax.swing.JFrame {
 
     //Al presionar el boton se debe guardar los datos en la base de datos y además mandar el QR al correo de la persona.
     private void jButtonIngresarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIngresarDatosActionPerformed
-    Consultas consu= new Consultas(con);
-        if (consu.validarAsistente(jTextField2.getText())) {
-            if (consu.insertarAsistente(jTextField2.getText(),jTextFieldNombre.getText(),
-                    jTextField1.getText(),jTextFieldOcupacion.getText()
-                    ,jTextFieldCorreo.getText())) {
-                                JOptionPane.showMessageDialog(null, "Nuevo Asistente registrado correctamente");
+String  carnet,nombre,correo,ocupacion;
+carnet=jTextField2.getText();
+nombre=jTextFieldNombre.getText();
+correo=jTextFieldCorreo.getText();
+ocupacion=jTextFieldOcupacion.getText();
+      con.inscribirGrupo(jTextFieldActividad.getText(),carnet);
+        if (con.insertarAsistente(carnet,nombre,ocupacion,correo)) {
+        JOptionPane.showMessageDialog(null, "Inscripcion Existosa");
 
-            } else {
-            }
+        CodigoControl cc = new CodigoControl();
+        
+        if (cc.generarQr(nombre, carnet, jTextFieldActividad.getText()) ){
+            Correo cor = new Correo();
+            cor.enviar(correo);
+        }
+        
         } else {
         }
+        
+
+        
         
     }//GEN-LAST:event_jButtonIngresarDatosActionPerformed
 
@@ -181,6 +197,8 @@ public class Inscripcion extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -206,4 +224,7 @@ public class Inscripcion extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNombre;
     private javax.swing.JTextField jTextFieldOcupacion;
     // End of variables declaration//GEN-END:variables
+
+
+
 }

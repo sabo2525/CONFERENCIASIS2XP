@@ -35,4 +35,17 @@ public class Decodificador {
             return "noQr"; 
         }
     }
+    
+    public  String decodificarQr(File bufferedImag) throws IOException {//busca una imagen en el directorio y decodifica en un string
+        BufferedImage bufferedImage = ImageIO.read(bufferedImag);
+        LuminanceSource source = new BufferedImageLuminanceSource(bufferedImage);
+        BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+        
+        try {
+            Result result = new MultiFormatReader().decode(bitmap);
+            return result.getText();
+        } catch (NotFoundException e) {
+            return "noQr"; 
+        }
+    }
 }
